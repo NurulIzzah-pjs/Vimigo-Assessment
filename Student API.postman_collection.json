@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "1e58d99d-525f-4bed-b2e2-c5dcc55ea191",
+		"name": "Student API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33177233"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "get student list",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "get student list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/student?page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:05:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:05:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"student list\": [\n        {\n            \"name\": \"Sarah Wilson\",\n            \"address\": \"567 Cedar St\"\n        },\n        {\n            \"name\": \"Matthew Taylor\",\n            \"address\": \"890 Birch St\"\n        },\n        {\n            \"name\": \"Emma Martinez\",\n            \"address\": \"111 Walnut St\"\n        },\n        {\n            \"name\": \"Christopher Anderson\",\n            \"address\": \"222 Cherry St\"\n        },\n        {\n            \"name\": \"Olivia Garcia\",\n            \"address\": \"333 Sycamore St\"\n        }\n    ],\n    \"total\": 20,\n    \"page\": \"2\",\n    \"last_page\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "search Student",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "search student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "s",
+											"value": "park",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/student/search?s=apple",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										"search"
+									],
+									"query": [
+										{
+											"key": "s",
+											"value": "apple"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:06:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:06:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"student list\": [\n        {\n            \"name\": \"lee jae wook\",\n            \"address\": \"456 Elm St\"\n        }\n    ],\n    \"total\": 1,\n    \"page\": 1,\n    \"last_page\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "create student",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "create student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "sample student",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "test@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "456 Gangnam St",
+											"type": "text"
+										},
+										{
+											"key": "study_course",
+											"value": "Computer Science",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/student/store",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 16:40:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 16:40:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Student Created Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "read student",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "read student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/student/21",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										"21"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:07:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:07:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"student\": {\n        \"name\": \"lee jae wook\",\n        \"address\": \"456 Elm St\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update student",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "update student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 26,\r\n        \"name\": \"sample student updated\",\r\n        \"email\": \"test@gmail.com\",\r\n        \"address\": \"456 Gangnam St\",\r\n        \"study_course\": \"Computer Science\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/student/21/edit",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										"21",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:10:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 17:10:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"student\": {\n        \"id\": 21,\n        \"name\": \"sample student updated\",\n        \"email\": \"test@gmail.com\",\n        \"address\": \"456 Gangnam St\",\n        \"study_course\": \"Computer Science\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete student",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "delete student",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/student/27/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										"27",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 16:40:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 16:40:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "53"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Student deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "aunthentication",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 16:39:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Feb 2024 16:39:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNGI0NGMxNzZmNjRlMzJmNmUzZTNlNmI4ZDA2YmM0MzI4ZTAzOTU3ODFhOGE1NTNhMjFkZWM4ZTIxZmZmNDYzMGM2ZTQzMTUxYmI5ZmQ1ZGMiLCJpYXQiOjE3MDkwNTE5ODUuOTY4OTgyLCJuYmYiOjE3MDkwNTE5ODUuOTY4OTg1LCJleHAiOjE3NDA2NzQzODUuNzQ4NDY5LCJzdWIiOiIxMCIsInNjb3BlcyI6W119.GIiLUUsUgx_zAnNQBwti4fOijZuMYaKkcq2z_mfo3-LviVz8vgd2tH8woTL82IwefeCVxmzNPUXf8Lj0Lzg8TB1_mGjOJKVQI0aTpFO4DQaXD_UdIio89bUtDaH6e1jmM-WF4SEsk2wcpB6MFfzG-bDcY5Qhcyg9afUa5fhh8DBV4ojUsC9yUMWLO4C2OQldF2qmsi0MpHjFCi73zyBz4bgS-704aqOSAs2FwpQD19wn41fkqIt753RDMbSRBAFvCQON3V2YCgqnGPGOD2mld-9iPzTK4TASW7Ey8kuLb0dbJTFKR5FZyvNHI2PyBzf2bi71MP6wO4CVoQrD_vRXjIRfYjuvrJ4hUXPOBUd7kCr5Qh4EhIZIACPxkmBrsmIXPkiNOitlFRFqWXojm7EiKUFx-NZ1IggQETKsTZMnhFEMG4ulTX0V2MsyMHd3MYql5DpSD1RsndqY5deeErfyxo5vY2a_IaxfCQdeboe9HfXk7bubT6b-WQFzlSFyOBNeLTGnq30s418aoUI_adFQYLr2-pU_ZscKlYp0VooxVkhyPHkb3TCWreBMRXpcz22nmGDIR7_TFWqk5msXHxz0L6HGNjd3iPv_du6w3ZL4-dGnaXnqjUEplxoc-xTf3Vb6oyyVbni77BswAhGmvNx00jal2LaA6qfYZGWLtX90ZOc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

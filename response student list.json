@@ -1,0 +1,27 @@
+{
+    "student list": [
+        {
+            "name": "Sarah Wilson",
+            "address": "567 Cedar St"
+        },
+        {
+            "name": "Matthew Taylor",
+            "address": "890 Birch St"
+        },
+        {
+            "name": "Emma Martinez",
+            "address": "111 Walnut St"
+        },
+        {
+            "name": "Christopher Anderson",
+            "address": "222 Cherry St"
+        },
+        {
+            "name": "Olivia Garcia",
+            "address": "333 Sycamore St"
+        }
+    ],
+    "total": 20,
+    "page": "2",
+    "last_page": 4
+}
